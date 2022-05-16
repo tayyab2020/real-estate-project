@@ -294,7 +294,7 @@
 
                 <button id="delete-rows" class="btn btn-danger">Delete</button>
                 <button style="margin-left: 5px;" id="unpublish-rows" class="btn btn-warning">Unpublish</button>
-                <button style="margin-left: 5px;" id="select-all-rows" class="btn btn-success">Select All</button>
+                <button data-id="0" style="margin-left: 5px;" id="select-all-rows" class="btn btn-success">Select All</button>
 
             </div>
 
@@ -328,8 +328,17 @@
     $(document).ready(function(){
 
         $('#select-all-rows').click(function () {
-        
-            $('.row_checkboxes').prop('checked', true);
+
+            $(".row_checkboxes").map(function(){
+                if($(this).is(":checked"))
+                {
+                    $(this).prop('checked', false);
+                }
+                else
+                {
+                    $(this).prop('checked', true);
+                }
+            });
 
         });
 
