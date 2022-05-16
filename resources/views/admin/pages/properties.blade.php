@@ -294,6 +294,7 @@
 
                 <button id="delete-rows" class="btn btn-danger">Delete</button>
                 <button style="margin-left: 5px;" id="unpublish-rows" class="btn btn-warning">Unpublish</button>
+                <button style="margin-left: 5px;" id="select-all-rows" class="btn btn-success">Select All</button>
 
             </div>
 
@@ -325,6 +326,12 @@
 
 <script>
     $(document).ready(function(){
+
+        $('#select-all-rows').click(function () {
+        
+            $('.row_checkboxes').prop('checked', this.checked);
+
+        });
 
         $('#delete-rows, #unpublish-rows').click(function () {
 
