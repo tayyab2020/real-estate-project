@@ -288,10 +288,21 @@
 
     @if(Auth::user()->usertype=='Admin')
 
-        <div style="padding-left: 10px;margin-bottom: 20px;">
-            <button id="delete-rows" class="btn btn-danger">Delete</button>
-            <button id="unpublish-rows" class="btn btn-warning">Unpublish</button>
-            {{ $propertieslist->appends(request()->query())->links() }}
+        <div style="padding-left: 10px;margin-bottom: 20px;display: flex;alig-items: center;justify-content: space-between;">
+            
+            <div>
+
+                <button id="delete-rows" class="btn btn-danger">Delete</button>
+                <button id="unpublish-rows" class="btn btn-warning">Unpublish</button>
+
+            </div>
+
+            <div>
+
+                {{ $propertieslist->appends(request()->query())->links() }}
+
+            </div>
+            
         </div>
 
         <form style="display: none;" id="rows-form" action="{{URL::to('admin/rows-action')}}" method="POST">
@@ -360,7 +371,8 @@
 
         $('#data-table1').dataTable({
             "lengthChange": true,
-            paging: false,
+            "bPaginate": false,
+            "bInfo": false,
             "order": [[ 0, "desc" ]] // Order on init. # is the column, starting at 0
         });
 
