@@ -329,16 +329,16 @@
 
         $('#select-all-rows').click(function () {
 
-            $(".row_checkboxes").map(function(){
-                if($(this).is(":checked"))
-                {
-                    $(this).prop('checked', false);
-                }
-                else
-                {
-                    $(this).prop('checked', true);
-                }
-            });
+            if($(this).data('id') == 0)
+            {
+                $(this).data('id',1);
+                $('.row_checkboxes').prop('checked', true);
+            }
+            else
+            {
+                $(this).data('id',0);
+                $('.row_checkboxes').prop('checked', false);
+            }
 
         });
 
