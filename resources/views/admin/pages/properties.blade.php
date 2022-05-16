@@ -290,10 +290,10 @@
 
         <div style="padding-left: 10px;margin-bottom: 20px;display: flex;alig-items: center;justify-content: space-between;">
             
-            <div>
+            <div style="display: flex;align-items: center;">
 
                 <button id="delete-rows" class="btn btn-danger">Delete</button>
-                <button id="unpublish-rows" class="btn btn-warning">Unpublish</button>
+                <button style="margin-left: 5px;" id="unpublish-rows" class="btn btn-warning">Unpublish</button>
 
             </div>
 
