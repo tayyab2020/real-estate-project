@@ -155,7 +155,6 @@ class PropertiesController extends Controller
         }
 
 
-
         date_default_timezone_set("Europe/Amsterdam");
 
         $i = 0;

@@ -262,7 +262,7 @@ class PropertiesController extends MainAdminController
 
     	if(Auth::user()->usertype=='Admin')
         {
-        	$propertieslist = Properties::orderBy('id','desc')->withCount(['enquiries'])->withCount(['viewings'])->get();
+        	$propertieslist = Properties::orderBy('id','desc')->withCount(['enquiries'])->withCount(['viewings'])->paginate(10);
         }
         else
         {
