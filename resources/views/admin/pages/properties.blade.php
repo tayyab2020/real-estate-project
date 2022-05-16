@@ -329,7 +329,7 @@
 
         $('#select-all-rows').click(function () {
         
-            $('.row_checkboxes').prop('checked', this.checked);
+            $('.row_checkboxes').prop('checked', true);
 
         });
 
