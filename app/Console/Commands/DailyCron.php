@@ -118,7 +118,7 @@ class DailyCron extends Command
                                 array_push($ids,$key->id);
                             }
 
-                            /*$url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=".urlencode($address_latitude).",".urlencode($address_longitude)."&destinations=".urlencode($property_latitude).",".urlencode($property_longitude)."&key=AIzaSyA65DZUJgWuYMvWwfgDQ59mPlxiRQJ6TdA";
+                            /*$url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=".urlencode($address_latitude).",".urlencode($address_longitude)."&destinations=".urlencode($property_latitude).",".urlencode($property_longitude)."&key=";
 
                             $result_string = file_get_contents($url);
                             $result = json_decode($result_string, true);
@@ -262,7 +262,7 @@ class DailyCron extends Command
                             array_push($ids,$key->id);
                         }
 
-                        /*$url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=".urlencode($address_latitude).",".urlencode($address_longitude)."&destinations=".urlencode($property_latitude).",".urlencode($property_longitude)."&key=AIzaSyA65DZUJgWuYMvWwfgDQ59mPlxiRQJ6TdA";
+                        /*$url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=".urlencode($address_latitude).",".urlencode($address_longitude)."&destinations=".urlencode($property_latitude).",".urlencode($property_longitude)."&key=";
 
                         $result_string = file_get_contents($url);
                         $result = json_decode($result_string, true);
