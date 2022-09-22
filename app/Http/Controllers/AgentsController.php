@@ -66,7 +66,7 @@ class AgentsController extends Controller
                         {
                             if($to)
                             {
-                                $agent_coordinates = file_get_contents("https://maps.google.com/maps/api/geocode/json?address=$to&key=AIzaSyChgcpFYG5aLIvd_U0Xmx6ry7jlL9NI_BU");
+                                $agent_coordinates = file_get_contents("https://maps.google.com/maps/api/geocode/json?address=$to&key=");
                                 $agent_coordinates = json_decode($agent_coordinates, true);
 
                                 if($agent_coordinates['status'] == 'OK')
@@ -134,7 +134,7 @@ class AgentsController extends Controller
                             $agents->where('users.id','!=',$key->id);
                         }*/
 
-                        /*$data = file_get_contents("https://maps.googleapis.com/maps/api/distancematrix/json?key=AIzaSyA65DZUJgWuYMvWwfgDQ59mPlxiRQJ6TdA&origins=$from&destinations=$to&language=en-EN&sensor=false");
+                        /*$data = file_get_contents("https://maps.googleapis.com/maps/api/distancematrix/json?key=&origins=$from&destinations=$to&language=en-EN&sensor=false");
                         $data = json_decode($data);
 
 
